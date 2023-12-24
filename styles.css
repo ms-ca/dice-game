@@ -1,0 +1,21 @@
+#dice-container {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+#dice {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  /* Add proper styling and animation */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Add keyframe animations for dice rolling here */
+
+button {
+  /* Style your button */
+}
