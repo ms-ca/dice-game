@@ -42,8 +42,8 @@ describe('rollDice', () => {
     expect(diceElement.classList.contains('dice-rolling')).toBe(false);
 
     // Check if the final face of the dice is set
-    expect(randomValue).toBeGreaterThanOrEqual(1);
-  expect(randomValue).toBeLessThanOrEqual(6);
+    expect(parseInt(diceElement.textContent)).toBeGreaterThanOrEqual(1);
+  expect(parseInt(diceElement.textContent)).toBeLessThanOrEqual(6);
   });
 });
 
