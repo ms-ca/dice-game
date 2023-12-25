@@ -30,14 +30,20 @@
     animation: decelerate 3s forwards;
 }
 
-button.roll-button {
-  font-size: 3em; /* Even larger font size */
-  padding: 20px 40px; /* Even larger button padding */
-  margin: 20px auto; /* Center button horizontally with margin */
+button.roll-button.large-button {
+  font-size: 4em; /* Larger font size */
+  padding: 30px 60px; /* Larger button padding */
+  margin: 0 auto; /* Center button horizontally */
   display: block; /* Make the button a block to allow margin auto to work */
   background-color: #4CAF50; /* Add a background color */
   color: white; /* Change text color to white */
   border: none; /* Remove border */
-  border-radius: 10px; /* Add border radius for rounded corners */
+  border-radius: 15px; /* Add border radius for rounded corners */
   cursor: pointer; /* Change cursor to pointer on hover */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Add shadow for depth */
+  transition: transform 0.1s ease; /* Smooth transform on click */
+}
+
+button.roll-button.large-button:active {
+  transform: scale(0.98); /* Slightly scale down the button when clicked */
 }
