@@ -33,7 +33,9 @@
 button.roll-button.large-button {
   font-size: 4em; /* Larger font size */
   padding: 30px 60px; /* Larger button padding */
-  margin: 0 auto; /* Center button horizontally */
+  position: absolute; /* Position the button absolutely within its container */
+  left: 50%; /* Position the button from the left half of its container */
+  transform: translateX(-50%); /* Translate the button back by half its width to center it */
   display: block; /* Make the button a block to allow margin auto to work */
   background-color: #4CAF50; /* Add a background color */
   color: white; /* Change text color to white */
