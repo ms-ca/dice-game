@@ -25,7 +25,7 @@ describe('rollDice', () => {
 
   test('should play tick sound', () => {
     // Call the rollDice function
-    rollDice(diceElement, tickSound);
+    const randomValue = rollDice(diceElement, tickSound);
 
     // Check if the the tick sound is played and verify the sound playback
     expect(tickSound.play).toHaveBeenCalled();
@@ -42,7 +42,8 @@ describe('rollDice', () => {
     expect(diceElement.classList.contains('dice-rolling')).toBe(false);
 
     // Check if the final face of the dice is set
-    expect(diceElement.textContent).toMatch(/[1-6]/);
+    expect(randomValue).toBeGreaterThanOrEqual(1);
+  expect(randomValue).toBeLessThanOrEqual(6);
   });
 });
 
