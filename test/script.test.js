@@ -1,5 +1,5 @@
 // Import necessary functions and classes from script.js
-import { rollDice } from '../script.js';
+import { rollDice } from './script.js';
 
 // Unit tests for the new business logic in script.js
 describe('rollDice', () => {
