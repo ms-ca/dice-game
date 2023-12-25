@@ -27,7 +27,7 @@ describe('rollDice', () => {
     // Call the rollDice function
     rollDice(diceElement, tickSound);
 
-    // Check if the tick sound is played
+    // Check if the the tick sound is played and verify the sound playback
     expect(tickSound.play).toHaveBeenCalled();
   });
 
