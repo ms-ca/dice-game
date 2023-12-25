@@ -10,6 +10,7 @@ document.getElementById('rollButton').addEventListener('click', function() {
 
 });
 
+// This function animates the dice roll, plays a sound, and sets the final face of the dice after 3 seconds.
 function rollDice() {
     var dice = document.getElementById('dice');
     dice.classList.add("dice-rolling");
