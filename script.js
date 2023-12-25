@@ -12,18 +12,26 @@ document.getElementById('rollButton').addEventListener('click', function() {
 
 function rollDice() {
     var dice = document.getElementById('dice');
-    dice.classList.add("dice-rolling");
-  
-    // Play sound
     var tickSound = document.getElementById('tickSound');
+    var interval;
+    var startTime = Date.now();
+    var duration = 3000; // 3 seconds
+
+    dice.classList.add("dice-rolling");
     tickSound.play();
-  
-    // Remove the animation class and set the final number after 3 seconds
-    setTimeout(() => {
-      dice.classList.remove("dice-rolling");
-      // set the final face of the dice based on a random number
-      dice.textContent = Math.floor(Math.random() * 6) + 1;
-    }, 3000);
-  }
-  
-  document.getElementById('rollButton').addEventListener('click', rollDice);
+
+    // Shuffle the dice value every 100ms
+    interval = setInterval(function() {
+        var elapsedTime = Date.now() - startTime;
+        var remainingTime = duration - elapsedTime;
+        if (remainingTime <= 0) {
+            clearInterval(interval);
+            dice.classList.remove("dice-rolling");
+            dice.textContent = Math.floor(Math.random() * 6) + 1;
+        } else {
+            dice.textContent = Math.floor(Math.random() * 6) + 1;
+        }
+    }, 100);
+}
+
+document.getElementById('rollButton').addEventListener('click', rollDice);
