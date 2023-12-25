@@ -2,7 +2,13 @@
 
 function rollDice() {
     var dice = document.getElementById('dice');
-    // This part of the code remains unchanged.
+    var tickSound = document.getElementById('tickSound');
+    var interval;
+    var startTime = Date.now();
+    var duration = 3000; // 3 seconds
+
+    dice.classList.add("dice-rolling");
+    tickSound.play();
 
     // Shuffle the dice value every 100ms
     interval = setInterval(function() {
@@ -11,7 +17,11 @@ function rollDice() {
         if (remainingTime <= 0) {
             clearInterval(interval);
             dice.classList.remove("dice-rolling");
-            dice.textContent = Math.floor(Math.random() * 6) + 1;
+            clearInterval(interval);
+            dice.classList.remove("dice-rolling");
+            var finalNumber = Math.floor(Math.random() * 6) + 1;
+            dice.textContent = finalNumber;
+            tickSound.play(); // Play the sound for the final number
         } else {
             var newNumber = Math.floor(Math.random() * 6) + 1;
             dice.textContent = newNumber;

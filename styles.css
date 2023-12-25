@@ -1,8 +1,8 @@
-#dice-container {
-  width: 200px; /* Larger dice container */
-  height: 200px; /* Larger dice container */
-  position: relative;
-  margin: 100px auto; /* Center the dice container vertically and horizontally */
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Use full viewport height to center vertically */
 }
 
 #dice {
@@ -31,8 +31,13 @@
 }
 
 button.roll-button {
-  font-size: 2em; /* Larger font size */
-  padding: 15px 30px; /* Larger button padding */
-  margin: 0 auto; /* Center button horizontally */
+  font-size: 3em; /* Even larger font size */
+  padding: 20px 40px; /* Even larger button padding */
+  margin: 20px auto; /* Center button horizontally with margin */
   display: block; /* Make the button a block to allow margin auto to work */
+  background-color: #4CAF50; /* Add a background color */
+  color: white; /* Change text color to white */
+  border: none; /* Remove border */
+  border-radius: 10px; /* Add border radius for rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
 }
