@@ -14,7 +14,23 @@
   left: 0;
 }
 
-/* Add keyframe animations for dice rolling here */
+@keyframes rollDice {
+    0% { transform: translate3d(0, -100%, 0); }
+    25% { transform: translate3d(0, -400%, 0); }
+    50% { transform: translate3d(0, -700%, 0); }
+    75% { transform: translate3d(0, -900%, 0); }
+    100% { transform: translate3d(0, -1100%, 0); }
+  }
+  
+  .dice {
+    display: inline-block;
+    /* ... other styles for the dice ... */
+    animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+  }
+  
+  .dice-rolling {
+    animation: rollDice 3s forwards;
+  }
 
 button {
   /* Style your button */
