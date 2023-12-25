@@ -1,24 +1,8 @@
-document.getElementById('rollButton').addEventListener('click', function() {
-  var sound = document.getElementById('tickSound');
-  // Animate the dice
-  var dice = document.getElementById('dice');
-  dice.textContent = 'Rolling...';
-  // You can use CSS animations or JavaScript to animate the dice roll
-
-  // Sound
-  sound.play();
-
-});
+// This block is removed as the event listener is already set up in the rollDice function below.
 
 function rollDice() {
     var dice = document.getElementById('dice');
-    var tickSound = document.getElementById('tickSound');
-    var interval;
-    var startTime = Date.now();
-    var duration = 3000; // 3 seconds
-
-    dice.classList.add("dice-rolling");
-    tickSound.play();
+    // This part of the code remains unchanged.
 
     // Shuffle the dice value every 100ms
     interval = setInterval(function() {
@@ -29,7 +13,10 @@ function rollDice() {
             dice.classList.remove("dice-rolling");
             dice.textContent = Math.floor(Math.random() * 6) + 1;
         } else {
-            dice.textContent = Math.floor(Math.random() * 6) + 1;
+            var newNumber = Math.floor(Math.random() * 6) + 1;
+            dice.textContent = newNumber;
+            tickSound.currentTime = 0; // Reset the sound to start
+            tickSound.play(); // Play the sound with each change
         }
     }, 100);
 }

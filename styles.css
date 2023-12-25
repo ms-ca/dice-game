@@ -1,7 +1,8 @@
 #dice-container {
-  width: 100px;
-  height: 100px;
+  width: 200px; /* Larger dice container */
+  height: 200px; /* Larger dice container */
   position: relative;
+  margin: 100px auto; /* Center the dice container vertically and horizontally */
 }
 
 #dice {
@@ -29,6 +30,9 @@
     animation: decelerate 3s forwards;
 }
 
-button {
-  /* Style your button */
+button.roll-button {
+  font-size: 2em; /* Larger font size */
+  padding: 15px 30px; /* Larger button padding */
+  margin: 0 auto; /* Center button horizontally */
+  display: block; /* Make the button a block to allow margin auto to work */
 }
