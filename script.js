@@ -8,11 +8,6 @@ document.getElementById('rollButton').addEventListener('click', function() {
   // Sound
   sound.play();
 
-  // Generate a random number between 1 and 6 after a delay
-  setTimeout(function() {
-    var randomNumber = Math.floor(Math.random() * 6) + 1;
-    dice.textContent = randomNumber; // Update text or image according to randomNumber
-  }, 1000); // Set timeout according to animation duration
 });
 
 function rollDice() {
