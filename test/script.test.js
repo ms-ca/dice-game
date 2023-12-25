@@ -1,7 +1,7 @@
 // Import necessary functions and classes from script.js
 import { rollDice } from './script.js';
 
-// Unit tests for the new business logic in script.js
+// Unit tests for the new business logic in script.js, including animation of the dice roll.
 describe('rollDice', () => {
   // Mock the necessary DOM elements and sound playback
   const diceElement = document.createElement('div');
